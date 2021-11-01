@@ -1,0 +1,12 @@
+.image-container {
+  width: 100%;
+}
+.responsive-img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.grayscale-min {
+  filter: grayscale(50%);
+}

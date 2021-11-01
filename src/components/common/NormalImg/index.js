@@ -8,8 +8,8 @@ const NormalImg = ({
 }) => {
   return (
     <div className="image-container">
-    <img alt={alt} src={src} className={`responsive-img `+ classNames}/>
-  </div>
+      <img alt={alt} src={src} className={`responsive-img `+ classNames}/>
+    </div>
   )
 }
 

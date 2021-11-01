@@ -7,11 +7,9 @@ const RowLayout = ({
 }) => {
   return (
     <NormalRow>
-      <div style={{ margin: "0 auto" }}>
         <NormalCol span={20}>
           {children}      
         </NormalCol>
-      </div>
     </NormalRow> 
   )
 }

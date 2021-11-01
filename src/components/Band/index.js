@@ -1,14 +1,27 @@
 import React from "react";
 import RowLayout from "../Layout/RowLayout";
+import BandMember from "../../assets/images/bandmember.jpg"
 import './Band.css'
+import NormalImg from "../common/NormalImg";
+
+const bandImg = [{
+  imgUrl: BandMember,
+  alt: "Random Name"
+},{
+  imgUrl: BandMember,
+  alt: "Random Name"
+},{
+  imgUrl: BandMember,
+  alt: "Random Name"
+}]
 
 const Band = () => {
   return (
     <RowLayout>
       <div
         className="w3-container w3-content w3-center w3-padding-64"
-        style={{ maxWidth: "800px" }}
         id="band"
+        style={{ border: "1px solid red"}}
       >
         <h2 className="w3-wide">THE BAND</h2>
         <p className="w3-opacity">
@@ -28,35 +41,15 @@ const Band = () => {
           consequat.
         </p>
         <div className="w3-row w3-padding-32">
-          <div className="w3-third">
-            <p>Name</p>
-            <img
-              src="/w3images/bandmember.jpg"
-              className="w3-round w3-margin-bottom"
-              alt="Random Name"
-              style={{ width: "60%" }}
-            />
-          </div>
-          <div className="w3-third">
-            <p>Name</p>
-            <img
-              src="/w3images/bandmember.jpg"
-              className="w3-round w3-margin-bottom"
-              alt="Random Name"
-              style={{ width: "60%" }}
-            />
-          </div>
-          <div className="w3-third">
-            <p>Name</p>
-            <img
-              src="/w3images/bandmember.jpg"
-              className="w3-round"
-              alt="Random Name"
-              style={{ width: "60%" }}
-            />
+          {
+            bandImg.map((data) => 
+            <div className="w3-third">
+              <p>Name</p>
+              <NormalImg alt={data.alt} src={data.imgUrl} classNames={"w3-round w3-margin-bottom"}/>
+            </div>)
+          }
           </div>
         </div>
-      </div>
     </RowLayout>
   );
 };
