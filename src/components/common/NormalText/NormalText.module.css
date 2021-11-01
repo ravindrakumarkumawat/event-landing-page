@@ -1,0 +1,15 @@
+.space {
+  display: flex;
+  flex-direction: column;
+}
+.label {  
+  color: #4b4949;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.value {
+  margin-top: .25rem;
+  color: #6e6d6d;
+  font-size: 16px;
+}
