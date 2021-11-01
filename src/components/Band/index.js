@@ -1,5 +1,6 @@
 import React from "react";
 import RowLayout from "../Layout/RowLayout";
+import './Band.css'
 
 const Band = () => {
   return (

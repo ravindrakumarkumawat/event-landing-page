@@ -13,7 +13,7 @@ const Home = () => {
       <Band />
       <Tour /> 
       <Contact /> 
-      <Image src={Map} alt="map" classNames={"grayscale-min"}/>
+      <Image />
       <Footer />
     </>
   )
