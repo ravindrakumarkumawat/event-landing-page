@@ -6,7 +6,7 @@ const RowLayout = ({
   children
 }) => {
   return (
-    <NormalRow>
+    <NormalRow classNames={"justifyCenter"}>
         <NormalCol span={15}>
           {children}      
         </NormalCol>

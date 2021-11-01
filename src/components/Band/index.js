@@ -23,7 +23,6 @@ const Band = () => {
       <div
         className="band-container band-content band-center band-padding-64"
         id="band"
-        style={{ border: "1px solid red"}}
       >
         <h2 className="band-wide">THE BAND</h2>
         <p className="band-opacity">
@@ -42,20 +41,18 @@ const Band = () => {
           nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.
         </p>
-        <div className="band-row band-padding-32">
-        <NormalRow>       
+        <NormalRow classNames={"justifyEvenly"}>       
           {
             bandImg.map((data) => 
             <div className="band-third">
               <NormalCol> 
                 <p>Name</p>              
-                <NormalImg alt={data.alt} src={data.imgUrl} classNames={"band-round band-margin-bottom w-60"}/>
+                <NormalImg alt={data.alt} src={data.imgUrl} classNames={"band-round band-margin-bottom"}/>
               </NormalCol>
             </div>
             )
           }
           </NormalRow>
-          </div>
         </div>
     </RowLayout>
   );

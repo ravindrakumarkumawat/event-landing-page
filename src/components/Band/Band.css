@@ -1,9 +1,15 @@
 .band-wide {
   letter-spacing: 4px;
+  text-align: center;
+}
+
+.band-third {
+  width: 20%;
 }
 
 .band-opacity {
   opacity: 0.60;
+  text-align: center;
 }
 
 .band-justify {
@@ -12,5 +18,4 @@
 
 .band-margin-bottom {
   margin-bottom: 16px!important;
-}
-
+} 

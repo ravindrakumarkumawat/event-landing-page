@@ -3,6 +3,14 @@
   width: 100%;
 }
 
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
 .mt {
   margin-top: .75rem;
 }
