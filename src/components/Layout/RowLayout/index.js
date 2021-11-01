@@ -7,7 +7,7 @@ const RowLayout = ({
 }) => {
   return (
     <NormalRow>
-        <NormalCol span={20}>
+        <NormalCol span={15}>
           {children}      
         </NormalCol>
     </NormalRow> 
