@@ -24,8 +24,8 @@ const Band = () => {
         className="band-container band-content band-center band-padding-64"
         id="band"
       >
-        <h2 className="band-wide">THE BAND</h2>
-        <p className="band-opacity">
+        <h2 className="wide center">THE BAND</h2>
+        <p className="opacity center">
           <i>We love music</i>
         </p>
         <p className="band-justify">

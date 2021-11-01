@@ -1,3 +1,11 @@
 .mt3 {
   margin-top: 3rem;
 }
+
+.wide {
+  letter-spacing: 4px;
+}
+
+.opacity {
+  opacity: 0.60;
+}
