@@ -1,5 +1,5 @@
 .w90 {
-  height: 99vh !important;
+  height: 100vh !important;
 }
 
 .container {
@@ -8,7 +8,7 @@
 
 .container .content {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
   color: #f1f1f1;
   width: 100%;
   padding: 20px;

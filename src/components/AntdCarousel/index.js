@@ -23,10 +23,10 @@ const bandImg = [
     subtitle: "Thank you, Chicago - A night we won't forget."
   },
   {
-    imgUrl: NewYork,
+    imgUrl: Ny,
     alt: "New York",
     title: "New York",
-    subtitle: "Thank you, Chicago - A night we won't forget."
+    subtitle: "The atmosphere in New York is lorem ipsum."
   }
 ]
 
