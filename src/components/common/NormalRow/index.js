@@ -5,9 +5,8 @@ const NormalRow = ({
   classNames,
   children
 }) => {
-  console.log(styles[classNames])
   return (
-    <div className={`${styles.row} ${styles[classNames]}`}>
+    <div className={`${styles.row} ${classNames ? styles[classNames] : ''}`}>
       {children}
     </div>
   )
