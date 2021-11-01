@@ -7,6 +7,7 @@ import Tour from '../TourModal'
 import Band from '../Band'
 import Navbar from '../Navbar'
 import './Home.css'
+import AntdCarousel from '../AntdCarousel'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <> 
       <Navbar />
       <div className="mt3">
+      <AntdCarousel />
       <Band />
       <Tour /> 
       <Contact /> 

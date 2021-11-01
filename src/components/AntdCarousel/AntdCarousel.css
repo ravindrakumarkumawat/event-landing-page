@@ -1,0 +1,22 @@
+.w90 {
+  height: 99vh !important;
+}
+
+.container {
+  position: relative;
+}
+
+.container .content {
+  position: absolute;
+  bottom: 10%;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+
+  text-align: center;
+}
+
+.container .content h3 {
+  color: #f1f1f1 !important;
+  font-size: 24px !important;
+}
