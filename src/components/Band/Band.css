@@ -1,0 +1,16 @@
+.band-wide {
+  letter-spacing: 4px;
+}
+
+.band-opacity {
+  opacity: 0.60;
+}
+
+.band-justify {
+  text-align: justify !important;
+}
+
+.band-margin-bottom {
+  margin-bottom: 16px!important;
+}
+
