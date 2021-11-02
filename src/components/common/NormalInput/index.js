@@ -1,18 +1,26 @@
 import React from 'react'
+import './NormalInput.css'
 
 const NormalInput = ({
+  id,
+  classNames,
   value,
   onChange,
   type="text",
-  placehoder
+  placeholder,
+  required=false,
+  name=""
 }) => {
   return (
     <input
+      className={`input border ${classNames}`}
       value={value}
-      id="search"
+      id={id}
       type={type}
-      placeholder={placehoder}
+      placeholder={placeholder}
       onChange={(e) => onChange(e.target.value)}
+      required={required}
+      name={name}
     />
   )
 }

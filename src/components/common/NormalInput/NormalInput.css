@@ -1,0 +1,9 @@
+input[type=text] {
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: .5rem;
+  /* margin-left: 1rem; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
