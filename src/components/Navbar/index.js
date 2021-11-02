@@ -1,12 +1,31 @@
 import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
+import { Menu, Dropdown, Button } from 'antd';
 import React from 'react'
 import './Navbar.css'
 import NormalRow from '../common/NormalRow'
 import NormalCol from '../common/NormalCol'
 import './Navbar1.css'
-
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+        Merchandise
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+        Extras
+      </a>
+    </Menu.Item>
+    <Menu.Item>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+        Media
+      </a>
+    </Menu.Item>
+  </Menu>
+);
 const Navbar = () => {
-  function myFunction() {
+  const handleActive = () => {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
@@ -23,7 +42,10 @@ const Navbar = () => {
           <a href="#band">BAND</a>
           <a href="#tour">TOUR</a>
           <a href="#contact">CONTACT</a>
-          <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+          <Dropdown overlay={menu} placement="bottomLeft" arrow>
+            <a>MORE</a>
+          </Dropdown>
+          <a href="javascript:void(0);" className="icon" onClick={handleActive}>
           <MenuOutlined />
           </a>
           <a className="icon1">
