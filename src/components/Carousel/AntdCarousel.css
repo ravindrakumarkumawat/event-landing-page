@@ -29,4 +29,8 @@
   .container .content {
     display: none;
   }
+
+  .w90 {
+    height: 74vh !important;
+  }
 }
