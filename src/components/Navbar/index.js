@@ -19,14 +19,17 @@ const Navbar = () => {
     <NormalRow>
       <NormalCol span={24}>
         <div className="topnav" id="myTopnav">
-  <a href="#home" className="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="javascript:void(0);" className="icon" onClick={myFunction}>
-    <MenuOutlined />
-  </a>
-</div>
+          <a href="#home" className="active">HOME</a>
+          <a href="#band">BAND</a>
+          <a href="#tour">TOUR</a>
+          <a href="#contact">CONTACT</a>
+          <a href="javascript:void(0);" className="icon" onClick={myFunction}>
+          <MenuOutlined />
+          </a>
+          <a className="icon1">
+            <SearchOutlined />
+          </a>
+        </div>
       </NormalCol>
     </NormalRow>
     </>
