@@ -11,6 +11,10 @@
   justify-content: space-evenly;
 }
 
+.justifyBetween {
+  justify-content: space-between;
+}
+
 .mt {
   margin-top: .75rem;
 }

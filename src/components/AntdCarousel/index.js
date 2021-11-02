@@ -3,9 +3,6 @@ import { Carousel } from 'antd';
 import Chicago from '../../assets/images/chicago.jpg'
 import La from '../../assets/images/la.jpg'
 import Ny from '../../assets/images/ny.jpg'
-import NewYork from '../../assets/images/newyork.jpg'
-import Paris from '../../assets/images/paris.jpg'
-import Sanfran from '../../assets/images/sanfran.jpg'
 import NormalImg from '../common/NormalImg';
 import './AntdCarousel.css'
 

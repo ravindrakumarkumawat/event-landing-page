@@ -22,3 +22,7 @@
 .band-round {
   border-radius: 4px;
 }
+
+.hover-opacity:hover {
+  opacity: 0.60;
+}

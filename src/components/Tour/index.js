@@ -1,6 +1,35 @@
 import React from 'react'
 import RowLayout from '../Layout/RowLayout'
+import NewYork from '../../assets/images/newyork.jpg'
+import Paris from '../../assets/images/paris.jpg'
+import Sanfran from '../../assets/images/sanfran.jpg'
 import './Tour.css'
+import NormalImg from '../common/NormalImg'
+import NormalRow from '../common/NormalRow'
+import NormalCol from '../common/NormalCol'
+
+const eventsPlace = [
+  { id: 1,
+    imgUrl: NewYork,
+    location: 'New York',
+    date: 'Fri 27 Nov 2016',
+    description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo.',
+  },
+  { 
+    id: 2,
+    imgUrl: Paris,
+    location: 'Paris',
+    date: 'Sat 28 Nov 2016',
+    description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo.',
+  },
+  {
+    id: 3,
+    imgUrl: Sanfran,
+    location: 'San Francisco',
+    date: 'Sun 29 Nov 2016',
+    description: 'Praesent tincidunt sed tellus ut rutrum sed vitae justo.',
+  }
+]
 
 const Tour = () => {
   return (
@@ -16,35 +45,28 @@ const Tour = () => {
         <li className="padding">November <span className="badge right margin-right">3</span></li>
       </ul>
 
-      <div className="row-padding padding-32">
-        <div className="third margin-bottom">
-          <img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />
-          <div className="container white">
-            <p><b>New York</b></p>
-            <p className="opacity">Fri 27 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div className="third margin-bottom">
-          <img src="/w3images/paris.jpg" alt="Paris" className="hover-opacity" />
-          <div className="container white">
-            <p><b>Paris</b></p>
-            <p className="opacity">Sat 28 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-        <div className="third margin-bottom">
-          <img src="/w3images/sanfran.jpg" alt="San Francisco" className="hover-opacity" />
-          <div className="container white">
-            <p><b>San Francisco</b></p>
-            <p className="opacity">Sun 29 Nov 2016</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-            <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
-          </div>
-        </div>
-      </div>
+      <NormalRow classNames={"justifyBetween"}>      
+        {/*className="row-padding padding-32"*/}
+          {
+            eventsPlace.map((d) =>    
+              <NormalCol span={7}>              
+              <div className="third margin-bottom">
+                <NormalImg src={d.imgUrl} alt={d.location} classNames={'hover-opacity'}/>
+                {/*<img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />*/}
+                <div className="container white">
+                  <p><b>{d.location}</b></p>
+                  <p className="opacity">{d.date}</p>
+                  <p>{d.description}</p>
+                  <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                </div>
+              </div>
+              </NormalCol>       
+            )
+          }
+      </NormalRow> 
+
+
+
     </div>
   </div>
 
