@@ -17,3 +17,10 @@
 .mtb-5 {
   margin: 5rem 0;
 }
+
+@media screen and (max-width: 600px) {
+  .band-third {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}

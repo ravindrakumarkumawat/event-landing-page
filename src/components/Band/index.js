@@ -47,7 +47,7 @@ const Band = () => {
             <div className="band-third">
               <NormalCol> 
                 <p>Name</p>              
-                <NormalImg alt={data.alt} src={data.imgUrl} classNames={"band-round band-margin-bottom"}/>
+                <NormalImg alt={data.alt} src={data.imgUrl} classNames={"band-round"}/>
               </NormalCol>
             </div>
             )
