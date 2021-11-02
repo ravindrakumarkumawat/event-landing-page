@@ -14,6 +14,7 @@ const Home = () => {
   return (
     <> 
       <Navbar />
+      <div className="mt3"></div>
       <AntdCarousel />
       <Band />
       <Tour /> 
