@@ -1,20 +1,25 @@
 import React from "react";
+import NormalCol from "../common/NormalCol";
+import NormalRow from "../common/NormalRow";
 import RowLayout from "../Layout/RowLayout";
 
 const Contact = () => {
   return (
     <RowLayout>
       <div
-        className="w3-container w3-content w3-padding-64"
-        style={{maxWidth:"800px"}}
+        className="container content padding-64"
         id="contact"
       >
-        <h2 className="w3-wide w3-center">CONTACT</h2>
-        <p className="w3-opacity w3-center">
+        <h2 className="wide center">CONTACT</h2>
+        <p className="opacity center">
           <i>Fan? Drop a note!</i>
         </p>
-        <div className="w3-row w3-padding-32">
-          <div className="w3-col m6 w3-large w3-margin-bottom">
+
+
+        <div className="row padding-32">
+          <NormalRow>
+            <NormalCol span={12}>
+            <div className="col m6 large margin-bottom">
             <i className="fa fa-map-marker" style={{width:"30px"}}></i> Chicago, US
             <br />
             <i className="fa fa-phone" style={{width:"30px"}}></i> Phone: +00 151515
@@ -25,44 +30,51 @@ const Contact = () => {
             Email: mail@mail.com
             <br />
           </div>
-          <div className="w3-col m6">
-            <form action="/action_page.php" target="_blank">
-              <div className="w3-row-padding" style={{margin:"0 -16px 8px -16px"}}>
-                <div className="w3-half">
-                  <input
-                    className="w3-input w3-border"
-                    type="text"
-                    placeholder="Name"
-                    required
-                    name="Name"
-                  />
-                </div>
-                <div className="w3-half">
-                  <input
-                    className="w3-input w3-border"
-                    type="text"
-                    placeholder="Email"
-                    required
-                    name="Email"
-                  />
-                </div>
+            </NormalCol>
+            <NormalCol span={12}>
+            
+          <div className="col m6">
+          <form action="/action_page.php" target="_blank">
+            <div className="row-padding" style={{margin:"0 -16px 8px -16px"}}>
+              <div className="half">
+                <input
+                  className="input border"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  name="Name"
+                />
               </div>
-              <input
-                className="w3-input w3-border"
-                type="text"
-                placeholder="Message"
-                required
-                name="Message"
-              />
-              <button
-                className="w3-button w3-black w3-section w3-right"
-                type="submit"
-              >
-                SEND
-              </button>
-            </form>
-          </div>
+              <div className="half">
+                <input
+                  className="input border"
+                  type="text"
+                  placeholder="Email"
+                  required
+                  name="Email"
+                />
+              </div>
+            </div>
+            <input
+              className="input border"
+              type="text"
+              placeholder="Message"
+              required
+              name="Message"
+            />
+            <button
+              className="button black section right"
+              type="submit"
+            >
+              SEND
+            </button>
+          </form>
         </div>
+            </NormalCol>
+          </NormalRow>         
+        </div>
+
+
       </div>
     </RowLayout>
   );
