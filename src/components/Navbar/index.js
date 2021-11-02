@@ -1,4 +1,4 @@
-import { SearchOutlined } from '@ant-design/icons'
+import { MenuOutlined, SearchOutlined } from '@ant-design/icons'
 import React from 'react'
 import './Navbar.css'
 import NormalRow from '../common/NormalRow'
@@ -14,17 +14,20 @@ const Navbar = () => {
             <div>
               <a href="#" className="">HOME</a>
             </div>
-            <div>
+            <div className="hide">
               <a href="#band" className="">BAND</a>
             </div>
-            <div>
+            <div className="hide">
               <a href="#tour" className="">TOUR</a>
             </div>
-            <div>
+            <div className="hide">
               <a href="#contact" className="">CONTACT</a>
             </div>
           </div>
-          <div className="navbar-right"><div><SearchOutlined /></div></div>
+          <div className="navbar-right">
+            <div className="hide"><SearchOutlined /></div>
+            <div className="bar-menu show"><MenuOutlined /></div>
+          </div>
         </div>
       </NormalCol>
     </NormalRow>
