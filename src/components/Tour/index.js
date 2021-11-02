@@ -34,11 +34,11 @@ const eventsPlace = [
 
 const Tour = () => {
   return (
+    <div className="bg-black" id="tour">
     <RowLayout>
-    <div className="black" id="tour">
     <div className="container content padding-64">
-      <h2 className="wide center">TOUR DATES</h2>
-      <p className="opacity center"><i>Remember to book your tickets!</i></p><br />
+      <h2 className="wide center white">TOUR DATES</h2>
+      <p className="opacity center white"><i>Remember to book your tickets!</i></p><br />
 
       <ul className="ul border bg-white text-grey">
         <li className="padding">September <span className="tag bg-red margin-left">Sold out</span></li>
@@ -51,10 +51,10 @@ const Tour = () => {
             {
               eventsPlace.map((d) =>    
                 <NormalCol span={7}>              
-                <div className="third margin-bottom">
+                <div className="third margin-bottom bg-white">
                   <NormalImg src={d.imgUrl} alt={d.location} classNames={'hover-opacity'}/>
                   {/*<img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />*/}
-                  <div className="container white">
+                  <div className="container">
                     <p><b>{d.location}</b></p>
                     <p className="opacity">{d.date}</p>
                     <p>{d.description}</p>
@@ -71,8 +71,8 @@ const Tour = () => {
 
 
     </div>
-  </div>
-    {/*
+    </RowLayout>
+     {/*
     <div id="ticketModal" className="modal">
     <div className="modal-content animate-top card-4">
       <header className="container teal center padding-32"> 
@@ -92,7 +92,7 @@ const Tour = () => {
     </div>
     </div>
           */}
-    </RowLayout>
+  </div>
   )
 }
 
