@@ -44,6 +44,23 @@ const Tour = () => {
     setIsSelectedUser(false)
   }
 
+  const [pay, setPay] = useState({})
+
+ 
+  const onChange = (e) => {
+    console.log(e.target.name, e.target.value)
+    setPay({
+      ...pay,
+      [e.target.name]:e.target.value
+    })
+  }
+
+  const handlePayment = () => {
+    alert(JSON.stringify(pay))
+    closeViewUser()
+    setPay({})
+  }
+
   return (
     <div className="bg-black" id="tour">
     <RowLayout>
@@ -90,11 +107,11 @@ const Tour = () => {
       </header>
       <div className="container">
         <p><label><i className="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <NormalInput placeholder={"How many?"}/>
+        <NormalInput placeholder={"How many?"} value={pay.amount || ''} name={'amount'} onChange={onChange}/>
         <p><label><i className="fa fa-user"></i> Send To</label></p>
-        <NormalInput placeholder={"Enter email"} />
+        <NormalInput placeholder={"Enter email"} value={pay.email || ''} name={"email"} onChange={onChange}/>
 
-        <NormalButton name={"PAY"} btntype={"btn-right"} handleAction={closeViewUser} />
+        <NormalButton name={"PAY"} btntype={"btn-right"} handleAction={handlePayment} />
         <NormalButton name={"Close"} btntype={"primary"} handleAction={closeViewUser} />
         <p className="right mt-2">Need <a href="#" className="text-blue">help?</a></p>
       </div>

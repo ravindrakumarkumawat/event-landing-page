@@ -24,6 +24,7 @@ const Contact = () => {
 
   const showAlert = () => {
     alert(JSON.stringify(contact))
+    setContact({})
   }
   return (
     <div className="mtb-5">
