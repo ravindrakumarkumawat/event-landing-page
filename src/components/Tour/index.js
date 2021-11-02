@@ -45,25 +45,26 @@ const Tour = () => {
         <li className="padding">November <span className="badge right margin-right">3</span></li>
       </ul>
 
-      <NormalRow classNames={"justifyBetween"}>      
-        {/*className="row-padding padding-32"*/}
-          {
-            eventsPlace.map((d) =>    
-              <NormalCol span={7}>              
-              <div className="third margin-bottom">
-                <NormalImg src={d.imgUrl} alt={d.location} classNames={'hover-opacity'}/>
-                {/*<img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />*/}
-                <div className="container white">
-                  <p><b>{d.location}</b></p>
-                  <p className="opacity">{d.date}</p>
-                  <p>{d.description}</p>
-                  <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+      <div className="row-padding padding-32">
+        <NormalRow classNames={"justifyBetween"}>      
+            {
+              eventsPlace.map((d) =>    
+                <NormalCol span={7}>              
+                <div className="third margin-bottom">
+                  <NormalImg src={d.imgUrl} alt={d.location} classNames={'hover-opacity'}/>
+                  {/*<img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />*/}
+                  <div className="container white">
+                    <p><b>{d.location}</b></p>
+                    <p className="opacity">{d.date}</p>
+                    <p>{d.description}</p>
+                    <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                  </div>
                 </div>
-              </div>
-              </NormalCol>       
-            )
-          }
-      </NormalRow> 
+                </NormalCol>       
+              )
+            }
+            </NormalRow> 
+        </div>
 
 
 

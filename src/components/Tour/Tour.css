@@ -54,3 +54,16 @@
 .margin-right {
   margin-right: 16px;
 }
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.padding-32 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.third{
+
+}
