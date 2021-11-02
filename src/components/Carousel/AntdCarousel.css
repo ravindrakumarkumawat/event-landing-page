@@ -24,7 +24,6 @@
 .container .content {
   display: block;
 }
-
 @media screen and (max-width: 768px) {
   .container .content {
     display: none;
