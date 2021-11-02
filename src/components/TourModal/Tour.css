@@ -86,3 +86,12 @@
 .mtb-5 {
   margin: 5rem 0;
 }
+
+@media screen and (max-width: 600px) {
+  .third, .ul {
+    margin: 1rem .35rem;
+  }
+  .ul {
+    margin: 0 1rem;
+  }
+}

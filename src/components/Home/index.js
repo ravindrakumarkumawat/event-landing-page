@@ -3,11 +3,11 @@ import Footer from '../Footer'
 import Image from '../Image'
 import Map from '../../assets/images/map.jpg'
 import Contact from '../Contact'
-import Tour from '../Tour'
+import Tour from '../TourModal'
 import Band from '../Band'
 import Navbar from '../Navbar'
 import './Home.css'
-import AntdCarousel from '../AntdCarousel'
+import AntdCarousel from '../Carousel'
 
 
 const Home = () => {

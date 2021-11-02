@@ -63,10 +63,9 @@ const Contact = () => {
                   </NormalCol>
                 </NormalRow>
                 <NormalRow>
-                  <NormalCol span={24}>
-                    <div className="right">                    
+                  <NormalCol span={24}>                  
                       <NormalButton name={'SEND'} btntype={"primary"}/>
-                    </div>
+                    
                     {/*<button className="button black section right" type="submit">
                       SEND
   </button>*/}

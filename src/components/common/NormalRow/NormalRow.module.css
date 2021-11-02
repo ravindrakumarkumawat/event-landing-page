@@ -1,6 +1,7 @@
 .row {
   display: flex;
   width: 100%;
+  flex-direction: row;
 }
 
 .justifyCenter {
@@ -30,4 +31,13 @@
 .padding-32 {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  .justifyBetween {
+    justify-content: unset;
+  }
 }
