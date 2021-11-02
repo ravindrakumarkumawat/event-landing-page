@@ -18,7 +18,7 @@ const NormalInput = ({
       id={id}
       type={type}
       placeholder={placeholder}
-      onChange={(e) => onChange(e.target.value)}
+      onChange={(e) => onChange(e)}
       required={required}
       name={name}
     />

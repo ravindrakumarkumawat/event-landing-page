@@ -3,7 +3,7 @@ import {
   HomeOutlined,
   PhoneOutlined,
 } from "@ant-design/icons";
-import React from "react";
+import React, { useState } from "react";
 import NormalButton from "../common/NormalButton";
 import NormalCol from "../common/NormalCol";
 import NormalInput from "../common/NormalInput";
@@ -12,6 +12,19 @@ import RowLayout from "../Layout/RowLayout";
 import './Contact.css'
 
 const Contact = () => {
+  const [contact, setContact] = useState({})
+
+  const onChange = (e) => {
+    console.log(e.target.name, e.target.value)
+    setContact({
+      ...contact,
+      [e.target.name]:e.target.value
+    })
+  }
+
+  const showAlert = () => {
+    alert(JSON.stringify(contact))
+  }
   return (
     <div className="mtb-5">
     <RowLayout>
@@ -37,34 +50,40 @@ const Contact = () => {
                 <NormalRow classNames={"justifyBetween"}>                  
                   <NormalCol span={49}>
                     <NormalInput 
+                      value={contact.name || ''}
                       classNames={"input border"}
                       required={true}
                       placeholder={"Name"}
-                      name={"Name"}
+                      name={"name"}
+                      onChange={onChange}
                     />
                   </NormalCol>
                   <NormalCol span={49}>
                     <NormalInput 
+                      value={contact.email || ''}
                       classNames={"input border"}
                       required={true}
                       placeholder={"Email"}
-                      name={"Email"}
+                      name={"email"}
+                      onChange={onChange}
                     />
                   </NormalCol>
                 </NormalRow>
                 <NormalRow>
                   <NormalCol span={24}>
                     <NormalInput 
+                      value={contact.message || ''}
                       classNames={"input border"}
                       required={true}
                       placeholder={"Message"}
-                      name={"Message"}
+                      name={"message"}
+                      onChange={onChange}
                     />
                   </NormalCol>
                 </NormalRow>
                 <NormalRow>
                   <NormalCol span={24}>                  
-                      <NormalButton name={'SEND'} btntype={"primary"}/>
+                      <NormalButton name={'SEND'} btntype={"primary"} handleAction={showAlert}/>
                     
                     {/*<button className="button black section right" type="submit">
                       SEND
