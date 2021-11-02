@@ -7,6 +7,7 @@ import './Tour.css'
 import NormalImg from '../common/NormalImg'
 import NormalRow from '../common/NormalRow'
 import NormalCol from '../common/NormalCol'
+import NormalButton from '../common/NormalButton'
 
 const eventsPlace = [
   { id: 1,
@@ -57,7 +58,8 @@ const Tour = () => {
                     <p><b>{d.location}</b></p>
                     <p className="opacity">{d.date}</p>
                     <p>{d.description}</p>
-                    <button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+                    {/*<button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>*/}
+                    <NormalButton name={"Buy Tickets"} btntype={"primary"}/>
                   </div>
                 </div>
                 </NormalCol>       
@@ -70,7 +72,7 @@ const Tour = () => {
 
     </div>
   </div>
-
+    {/*
     <div id="ticketModal" className="modal">
     <div className="modal-content animate-top card-4">
       <header className="container teal center padding-32"> 
@@ -89,7 +91,7 @@ const Tour = () => {
       </div>
     </div>
     </div>
-      
+          */}
     </RowLayout>
   )
 }

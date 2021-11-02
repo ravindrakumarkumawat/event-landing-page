@@ -4,11 +4,10 @@ import styles from './NormalButton.module.css'
 const NormalButton = ({
   name,
   btntype="btn",
-  selected,
   handleAction
 }) => {
   return (
-    <button className={`${styles[btntype]}`} onClick={() => handleAction(selected)}>{name}</button>
+    <button className={`${styles[btntype]}`} onClick={() => handleAction()}>{name}</button>
   )
 }
 
