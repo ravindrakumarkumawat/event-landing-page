@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="bg-grey">
       <RowLayout>
-        <div className="footer">
+        <div className="footer mtb-5">
           <div className="icons-list">
             <FacebookOutlined />
             <InstagramOutlined />

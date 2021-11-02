@@ -9,9 +9,11 @@ import NormalCol from "../common/NormalCol";
 import NormalInput from "../common/NormalInput";
 import NormalRow from "../common/NormalRow";
 import RowLayout from "../Layout/RowLayout";
+import './Contact.css'
 
 const Contact = () => {
   return (
+    <div className="mtb-5">
     <RowLayout>
       <div className="container content padding-64" id="contact">
         <h2 className="wide center">CONTACT</h2>
@@ -22,18 +24,18 @@ const Contact = () => {
         <div className="row padding-32">
           <NormalRow>
             <NormalCol span={12}>
-              <div className="col m6 large margin-bottom">
-                <HomeOutlined /> Chicago, US
+              <div className="large margin-bottom">
+                <HomeOutlined /> <span>Chicago, US</span>
                 <br />
-                <PhoneOutlined /> Phone: +00 151515
+                <PhoneOutlined /> <span>Phone: +00 151515</span>
                 <br />
-                <GooglePlusOutlined /> Email: mail@mail.com
+                <GooglePlusOutlined /> <span>Email: mail@mail.com</span>
                 <br />
               </div>
             </NormalCol>
             <NormalCol span={12}>
-                <NormalRow className="row-padding">                  
-                  <NormalCol span={12} className="half">
+                <NormalRow classNames={"justifyBetween"}>                  
+                  <NormalCol span={49}>
                     <NormalInput 
                       classNames={"input border"}
                       required={true}
@@ -41,7 +43,7 @@ const Contact = () => {
                       name={"Name"}
                     />
                   </NormalCol>
-                  <NormalCol span={12} className="half">
+                  <NormalCol span={49}>
                     <NormalInput 
                       classNames={"input border"}
                       required={true}
@@ -61,8 +63,10 @@ const Contact = () => {
                   </NormalCol>
                 </NormalRow>
                 <NormalRow>
-                  <NormalCol>
-                    <NormalButton name={'SEND'} btntype={"primary"}/>
+                  <NormalCol span={24}>
+                    <div className="right">                    
+                      <NormalButton name={'SEND'} btntype={"primary"}/>
+                    </div>
                     {/*<button className="button black section right" type="submit">
                       SEND
   </button>*/}
@@ -72,7 +76,8 @@ const Contact = () => {
           </NormalRow>
         </div>
       </div>
-    </RowLayout>
+    </RowLayout>    
+    </div>
   );
 };
 

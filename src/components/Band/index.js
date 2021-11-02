@@ -21,7 +21,7 @@ const Band = () => {
   return (
     <RowLayout>
       <div
-        className="band-container band-content band-center band-padding-64"
+        className="band-container band-content band-center band-padding-64 mtb-5"
         id="band"
       >
         <h2 className="wide center">THE BAND</h2>

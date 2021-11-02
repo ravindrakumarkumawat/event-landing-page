@@ -1,0 +1,17 @@
+.large {
+    font-size: 18px;
+    color: #000;
+}
+
+.large span {
+  padding-left: 1rem;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end !important;
+}
+
+.mtb-5 {
+  margin: 5rem 0;
+}

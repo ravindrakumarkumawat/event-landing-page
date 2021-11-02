@@ -36,7 +36,7 @@ const Tour = () => {
   return (
     <div className="bg-black" id="tour">
     <RowLayout>
-    <div className="container content padding-64">
+    <div className="container content padding-64 mtb-5">
       <h2 className="wide center white">TOUR DATES</h2>
       <p className="opacity center white"><i>Remember to book your tickets!</i></p><br />
 
