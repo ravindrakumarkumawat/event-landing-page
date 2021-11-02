@@ -8,6 +8,7 @@ import NormalImg from '../common/NormalImg'
 import NormalRow from '../common/NormalRow'
 import NormalCol from '../common/NormalCol'
 import NormalButton from '../common/NormalButton'
+import NormalInput from '../common/NormalInput'
 
 const eventsPlace = [
   { id: 1,
@@ -85,18 +86,17 @@ const Tour = () => {
     <div id="ticketModal" className={`view-container ${isSelectedUser ? 'view-container-show' : 'view-container-hide'}`}>
     <div className="modal-content animate-top card-4">
       <header className="container teal center padding-32"> 
-        <span onClick={() => document.getElementById('ticketModal').style.display='none'}
-       className="button teal xlarge display-topright">×</span>
         <h2 className="wide"><i className="fa fa-suitcase margin-right"></i>Tickets</h2>
       </header>
       <div className="container">
         <p><label><i className="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
-        <input className="input border" type="text" placeholder="How many?" />
+        <NormalInput placeholder={"How many?"}/>
         <p><label><i className="fa fa-user"></i> Send To</label></p>
-        <input className="input border" type="text" placeholder="Enter email" />
-        <button className="button block teal padding-16 section right">PAY <i className="fa fa-check"></i></button>
-        <button className="button red section" onClick={closeViewUser}>Close <i className="fa fa-remove"></i></button>
-        <p className="right">Need <a href="#" className="text-blue">help?</a></p>
+        <NormalInput placeholder={"Enter email"} />
+
+        <NormalButton name={"PAY"} btntype={"btn-right"} handleAction={closeViewUser} />
+        <NormalButton name={"Close"} btntype={"primary"} handleAction={closeViewUser} />
+        <p className="right mt-2">Need <a href="#" className="text-blue">help?</a></p>
       </div>
     </div>
     </div>
