@@ -14,14 +14,12 @@ const Home = () => {
   return (
     <> 
       <Navbar />
-      <div className="mt3">
       <AntdCarousel />
       <Band />
       <Tour /> 
       <Contact /> 
       <Image />
       <Footer />
-      </div>
     </>
   )
 }
