@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RowLayout from '../Layout/RowLayout'
 import NewYork from '../../assets/images/newyork.jpg'
 import Paris from '../../assets/images/paris.jpg'
@@ -33,6 +33,16 @@ const eventsPlace = [
 ]
 
 const Tour = () => {
+  const [isSelectedUser, setIsSelectedUser] = useState(false);
+
+  const viewUser = (data) => {
+    setIsSelectedUser(true)
+  }
+
+  const closeViewUser = () => {
+    setIsSelectedUser(false)
+  }
+
   return (
     <div className="bg-black" id="tour">
     <RowLayout>
@@ -59,7 +69,7 @@ const Tour = () => {
                     <p className="opacity">{d.date}</p>
                     <p>{d.description}</p>
                     {/*<button className="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>*/}
-                    <NormalButton name={"Buy Tickets"} btntype={"primary"}/>
+                    <NormalButton name={"Buy Tickets"} btntype={"primary"} handleAction={viewUser}/>
                   </div>
                 </div>
                 </NormalCol>       
@@ -72,8 +82,7 @@ const Tour = () => {
 
     </div>
     </RowLayout>
-     {/*
-    <div id="ticketModal" className="modal">
+    <div id="ticketModal" className={`view-container ${isSelectedUser ? 'view-container-show' : 'view-container-hide'}`}>
     <div className="modal-content animate-top card-4">
       <header className="container teal center padding-32"> 
         <span onClick={() => document.getElementById('ticketModal').style.display='none'}
@@ -86,12 +95,12 @@ const Tour = () => {
         <p><label><i className="fa fa-user"></i> Send To</label></p>
         <input className="input border" type="text" placeholder="Enter email" />
         <button className="button block teal padding-16 section right">PAY <i className="fa fa-check"></i></button>
-        <button className="button red section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i className="fa fa-remove"></i></button>
+        <button className="button red section" onClick={closeViewUser}>Close <i className="fa fa-remove"></i></button>
         <p className="right">Need <a href="#" className="text-blue">help?</a></p>
       </div>
     </div>
     </div>
-          */}
+          
   </div>
   )
 }
