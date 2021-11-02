@@ -54,7 +54,7 @@ const Tour = () => {
                 <div className="third margin-bottom bg-white">
                   <NormalImg src={d.imgUrl} alt={d.location} classNames={'hover-opacity'}/>
                   {/*<img src="/w3images/newyork.jpg" alt="New York" className="hover-opacity" />*/}
-                  <div className="container">
+                  <div className="t-container">
                     <p><b>{d.location}</b></p>
                     <p className="opacity">{d.date}</p>
                     <p>{d.description}</p>
